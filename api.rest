@@ -1,0 +1,27 @@
+GET http://localhost:1337/api/products?fields[0]=nombre&fields[1]=descripcion&fields[2]=precio&fields[3]=slug&fields[4]
+Authorization: Bearer 4ca58694c12d6c84848ab6cd2ba17b15c8a9f5efe63bbcc1919f0675a9c70d03d0ba40582972c49cf242e9432f7774a7415e27c3539e5b80556f9d981e3101dff1252aaa82a7456356bc4099fef8963c577d6df027978e4224c36bf6f86a6fdb7d22135015965d1a06bad5f6a2b914bb1a6f05bf37d8c7f29026510b07e40642
+
+### Categorías
+GET http://localhost:1337/api/categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url&populate[marca][fields][0]=name
+
+### Productos destacados
+GET http://localhost:1337/api/products?filters[destacado][$eq]=true&populate[imagen][fields][0]=url
+Authorization: Bearer 4ca58694c12d6c84848ab6cd2ba17b15c8a9f5efe63bbcc1919f0675a9c70d03d0ba40582972c49cf242e9432f7774a7415e27c3539e5b80556f9d981e3101dff1252aaa82a7456356bc4099fef8963c577d6df027978e4224c36bf6f86a6fdb7d22135015965d1a06bad5f6a2b914bb1a6f05bf37d8c7f29026510b07e40642
+
+### Marcas
+GET http://localhost:1337/api/marcas?fields[0]=name&populate[image][fields][0]=url
+Authorization: Bearer 4ca58694c12d6c84848ab6cd2ba17b15c8a9f5efe63bbcc1919f0675a9c70d03d0ba40582972c49cf242e9432f7774a7415e27c3539e5b80556f9d981e3101dff1252aaa82a7456356bc4099fef8963c577d6df027978e4224c36bf6f86a6fdb7d22135015965d1a06bad5f6a2b914bb1a6f05bf37d8c7f29026510b07e40642
+
+### Productos
+GET http://localhost:1337/api/products?populate[imagen][fields][0]=url&populate[categoria][fields][0]=name&populate[marca][fields][0]=name
+
+### Todos los Productos
+GET http://localhost:1337/api/products?populate[marca][fields][0]=name&populate[categoria][fields][0]=name
+
+### Consultas DNI
+GET https://api.apis.net.pe/v2/reniec/dni?numero=73799763
+Authorization: Bearer apis-token-13463.5Q8GNSsTRlf9YsgZs6PZYPyGHNOvb2Ue
+
+### Consulta RUC
+GET https://api.apis.net.pe/v2/sunat/ruc?numero=20604359113
+Authorization: Bearer apis-token-13463.5Q8GNSsTRlf9YsgZs6PZYPyGHNOvb2Ue
