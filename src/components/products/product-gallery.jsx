@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export function ProductGallery({ images }) {
+  console.log("🚀 ~ ProductGallery ~ images:", images)
   const [selectedImage, setSelectedImage] = useState(0);
 
   // Si no se proporcionan imágenes, use un marcador de posición
